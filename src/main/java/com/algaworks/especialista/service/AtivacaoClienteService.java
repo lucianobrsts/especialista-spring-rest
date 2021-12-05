@@ -1,33 +1,25 @@
 package com.algaworks.especialista.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.algaworks.especialista.modelo.Cliente;
 import com.algaworks.especialista.notificacao.Notificador;
 
+@Component
 public class AtivacaoClienteService {
 
-	@Autowired
+	@Autowired(required = false)
 	private Notificador notificador;
 	
-//	@Autowired
-//	public AtivacaoClienteService(Notificador notificador) {
-//		this.notificador = notificador;
-//	}
-//	
-//	public AtivacaoClienteService(String qualquer) {
-//		
-//	}
-
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
 
-		notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
+		if (notificador != null) {
+			notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
+		} else {
+			System.out.println("Não existe notificador, mas cliente foi ativado");
+		}
 	}
-
-//	@Autowired
-//	public void setNotificador(Notificador notificador) {
-//		this.notificador = notificador;
-//	}
 
 }
