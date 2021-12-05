@@ -1,11 +1,8 @@
 package com.algaworks.especialista.service;
 
-import org.springframework.stereotype.Component;
-
 import com.algaworks.especialista.modelo.Cliente;
 import com.algaworks.especialista.notificacao.Notificador;
 
-@Component
 public class AtivacaoClienteService {
 
 	private Notificador notificador;
