@@ -29,4 +29,7 @@ public class Cliente {
 		return ativo;
 	}
 
+	public void ativar() {
+		this.ativo = true;
+	}
 }
