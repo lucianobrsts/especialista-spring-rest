@@ -11,6 +11,7 @@ import com.algaworks.especialista.service.ClienteAtivadoEvent;
 
 @Component
 public class NotificacaoService {
+	
 	@TipoDoNotificador(NivelUrgencia.SEM_URGENCIA)
 	@Autowired
 	private Notificador notificador;
