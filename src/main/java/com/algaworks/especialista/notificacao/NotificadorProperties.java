@@ -7,8 +7,15 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("notificador.email")
 public class NotificadorProperties {
 
+	/**
+	 * Host do servidor de E-mail
+	 */
 	private String hostServidor;
-	private Integer portaServidor;
+	
+	/**
+	 * Porta do servidor de E-mail
+	 */
+	private Integer portaServidor = 25;
 
 	public String getHostServidor() {
 		return hostServidor;
