@@ -6,16 +6,13 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "tab_restaurante")
 public class Restaurante {
 
 	@Id
 	private Long id;
 
-	@Column(name = "nome")
 	private String nome;
 
 	@Column(name = "taxa_frete")
